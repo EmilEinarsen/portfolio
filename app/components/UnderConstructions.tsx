@@ -1,5 +1,7 @@
-import React from 'react'
+
+
 import { useTheme } from '~/utils/theme-provider'
+import { Link } from './Link'
 
 const faceSize = 300
 const atlasToFaceRatio = 13/16
@@ -14,8 +16,11 @@ export const UnderConstructions = () => {
         <span className="not-sr-only">🔨🚧</span>
       </h1>
       <div className="relative w-fit h-fit mx-auto" style={{ minWidth: faceSize, height: faceSize * (1+atlasToFaceRatio) }}>
-        <img src='/profile.webp' alt="me" className="aspect-square rotate-12" width={faceSize} />
-        <img src={`/atlas${theme === 'dark' ? '-inverted' : ''}.webp`} className="mx-auto translate-x-6 -translate-y-[31%]" width={faceSize * atlasToFaceRatio} />
+        <Link to="https://github.com/EmilEinarsen" className='rounded-full h-full'>
+          <img src='/profile.webp' alt="Emil Einarsen" className="aspect-square rotate-12 pointer-events-none" width={faceSize} />
+          <span className='sr-only'>Emil Einarsens Github Profile</span>
+        </Link>
+        <img src={`/atlas${theme === 'dark' ? '-inverted' : ''}.webp`} alt="Greek God Atlas" className="mx-auto translate-x-6 -translate-y-[31%] pointer-events-none" width={faceSize * atlasToFaceRatio} />
       </div>
     </div>
   )
