@@ -10,6 +10,8 @@ module.exports = {
       'xs': '400px',
     }
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
   darkMode: 'class',
 };

@@ -8,6 +8,7 @@ import {
   ScrollRestoration,
   useLoaderData,
 } from "@remix-run/react";
+import clsx from "clsx";
 
 import stylesheet from "~/tailwind.css";
 import { ThemeHead, ThemeBody, ThemeProvider } from "./utils/theme-provider";
@@ -19,7 +20,7 @@ export const links: LinksFunction = () => [
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
-  title: "New Remix App",
+  title: "Home | Emil Einarsen",
   viewport: "width=device-width,initial-scale=1",
 });
 
@@ -32,13 +33,13 @@ export default function App() {
 
   return (
     <ThemeProvider specifiedTheme={theme}>
-      <html lang="en" className={theme}>
+      <html lang="en" className={clsx(theme, 'scroll-smooth')}>
         <head>
           <Meta />
           <Links />
           <ThemeHead ssrTheme={Boolean(theme)} />
         </head>
-        <body className="dark:bg-black">
+        <body className="scroll-smooth relative flex min-h-screen flex-col gap-20 dark:bg-zinc-900">
           <Outlet />
           <ThemeBody ssrTheme={Boolean(theme)} />
           <ScrollRestoration />
