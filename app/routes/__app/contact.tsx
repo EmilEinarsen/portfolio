@@ -25,7 +25,7 @@ const Contact = () => {
       <h2 className="text-zinc-100 uppercase text-5xl md:text-6xl lg:text-8xl font-black px-4">
         Contact
       </h2>
-      <div className="prose dark:prose-invert max-w-2xl px-4">
+      <div className="prose prose-invert max-w-2xl px-4">
         <p className="mt-6 max-w-xl">
           Creating something interesting and need a pair of hands? I would love to chat! Send
           me email or message on LikedIn and we can schedule a time to talk.

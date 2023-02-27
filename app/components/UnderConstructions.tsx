@@ -8,7 +8,8 @@ const faceSize = 250
 const atlasToFaceRatio = 13/16
 
 export const UnderConstructions = () => {
-  const [ theme ] = useTheme()
+  const [ theme ] = /* useTheme() */ [ 'dark' ]
+  
   return (
     <div className="flex flex-col gap-12 w-fit mx-auto lg:mx-0">
       <div className="w-fit mx-auto" style={{ minWidth: faceSize, height: faceSize * (1+atlasToFaceRatio) }}>

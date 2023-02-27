@@ -39,7 +39,7 @@ export default function App() {
           <Links />
           <ThemeHead ssrTheme={Boolean(theme)} />
         </head>
-        <body className="scroll-smooth relative flex min-h-screen flex-col gap-20 dark:bg-zinc-900">
+        <body className="scroll-smooth relative flex min-h-screen flex-col gap-20 bg-zinc-900">
           <Outlet />
           <ThemeBody ssrTheme={Boolean(theme)} />
           <ScrollRestoration />
